@@ -19,10 +19,18 @@ const secret=process.env.SECRET
 //'mongodb://127.0.0.1:27017/TradeTracker'
 
 
-
+const store=new MongoStore({
+  mongoUrl: dburl,
+  touchAfter: 24 * 60 * 60,
+  crypto: {
+      secret,
+  }
+})
 
 const sessionConfig={
-  secret:'thisshdbabetterscret', 
+  store,
+  name:'session',
+  secret,
   resave:false,
   saveUninitialized:true,
   cookie:{
@@ -54,13 +62,7 @@ async function main() {
   await mongoose.connect(dburl);
 }
 
-const store=new MongoStore({
-  mongoUrl: dburl,
-  touchAfter: 24 * 60 * 60,
-  crypto: {
-      secret,
-  }
-})
+
 main().catch(err => console.log(err));
 
 const db = mongoose.connection;
