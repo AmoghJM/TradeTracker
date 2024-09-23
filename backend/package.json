@@ -21,5 +21,11 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "^5.0.1",
     "two-step-auth": "^1.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "build": "react-scripts build"
   }
 }
+
