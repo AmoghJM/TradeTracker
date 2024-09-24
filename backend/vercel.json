@@ -1,16 +1,11 @@
 {
     "version" : 2,
     "name" : "Full Stack",
-    "builds" : [
-        {
-            "src" : "./App.js",
-            "use" : "@vercel/node"
-        }
-    ],
-    "routes" : [
+    
+    "rewrites" : [
         {
             "src" : "/(.*)",
-            "dest" : "/"
+            "dest" : "/backend"
         }
     ]
 }
