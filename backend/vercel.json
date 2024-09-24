@@ -5,7 +5,7 @@
     "rewrites" : [
         {
             "source" : "/(.*)",
-            "dest" : "/backend"
+            "destination" : "/backend"
         }
     ]
 }
