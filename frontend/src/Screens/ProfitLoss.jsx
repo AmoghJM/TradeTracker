@@ -48,7 +48,7 @@ function ProfitLoss() {
     const fetchData = async () => {
 
         try {
-            const result = await axios.get("http://localhost:4500/stocks");
+            const result = await axios.get("https://tradetracker-rq6i.onrender.com/stocks");
            
             setbackEndData(result.data);
            
@@ -75,7 +75,7 @@ function ProfitLoss() {
         
         try {
             
-            const response = await axios.post("http://localhost:4500/", { symbol, entryPrice, stopLoss, target, quantity });
+            const response = await axios.post("https://tradetracker-rq6i.onrender.com/", { symbol, entryPrice, stopLoss, target, quantity });
             setFlashMessage("Added successfully");
             setShowInputs(false);
             setbackEndData(prevData=>[...prevData,response.data])
@@ -121,7 +121,7 @@ function ProfitLoss() {
     const removeTrade= async(id)=>{
         try{
             console.log("From profit loss file",id)
-        await axios.delete(`http://localhost:4500/stocks/${id}`,id)
+        await axios.delete(`https://tradetracker-rq6i.onrender.com/stocks/${id}`,id)
       
         fetchData()
         }catch(err){
