@@ -9,7 +9,7 @@ const RegistrationForm = ({ closeRegisterForm }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4500/register', { email, password });
+      const response = await axios.post('https://tradetracker-rq6i.onrender.com/register', { email, password });
       setMessage(response.data);
     } catch (error) {
       setMessage('Error in registration');
