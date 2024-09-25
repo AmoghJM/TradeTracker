@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import { Chart, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale } from 'chart.js';
+
+
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 const alphavantagekey2=import.meta.env.VITE_ALPHAVANTAGE_KEY2
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
 
 const BarChart = ({ data: backEndData }) => {
   const [symbols, setSymbols] = useState([]);
