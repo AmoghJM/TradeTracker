@@ -38,8 +38,8 @@ const RegistrationForm = ({ closeRegisterForm }) => {
             </div>
           </div>
           <div className="form-group row">
-            <label htmlFor="password" className="col-sm-3 col-form-label">Password:</label>
-            <div className="col-sm-9">
+            <label htmlFor="password" className="col-sm-4 col-form-label">Password:</label>
+            <div className="col-sm-8">
               <input
                 type="password"
                 className="form-control"
