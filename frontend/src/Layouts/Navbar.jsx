@@ -4,6 +4,8 @@ import LoginForm from '../Components/LoginForm';
 import { AuthContext } from '../Contexts/AuthContext';
 import TradeWarning from './TradeWarning';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
@@ -46,38 +48,38 @@ function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-success justify-content-center">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">Trade Tracker</a>
+          <Link className="navbar-brand" href="#">Trade Tracker</Link>
           <button className="navbar-toggler" type="button" onClick={toggleNavbar} data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/">Home</a>
+                <Link className="nav-link" href="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/LandingPage">Learn</a>
+                <Link className="nav-link" href="/LandingPage">Learn</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/ProfitLoss">Portfolio</a>
+                <Link className="nav-link" href="/ProfitLoss">Portfolio</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/TradingJournal">Trading Journal</a>
+                <Link className="nav-link" aria-current="page" href="/TradingJournal">Trading Journal</Link>
               </li>
             </ul>
             <ul className="navbar-nav ms-auto">
               {!isAuthenticated ? (
                 <>
                   <li className="nav-item">
-                    <a className="nav-link" href="#" onClick={handleLoginClick}>Login</a>
+                    <Link className="nav-link" href="#" onClick={handleLoginClick}>Login</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#" onClick={handleRegisterClick}>Register</a>
+                    <Link className="nav-link" href="#" onClick={handleRegisterClick}>Register</Link>
                   </li>
                 </>
               ) : (
                 <li className="nav-item">
-                  <a className="nav-link" href="#" onClick={handleLogoutClick}>Logout</a>
+                  <Link className="nav-link" href="#" onClick={handleLogoutClick}>Logout</Link>
                 </li>
               )}
             </ul>
