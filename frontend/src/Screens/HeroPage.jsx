@@ -6,6 +6,9 @@ import LoginForm from "../Components/LoginForm";
 import { useState } from "react";
 import { useNavigate,useLocation } from "react-router-dom";
 import Footer from "../Layouts/Footer";
+import { Link } from 'react-router-dom';
+
+
 const HeroPage=()=>{
     const[showRegistrationForm,setShowRegistrationForm]=useState(false)
     const[showLoginForm,setShowLoginForm]=useState(false)
@@ -72,7 +75,9 @@ const HeroPage=()=>{
 <p className="fs-5 mt-5">Welcome to Trade Tracker – your ultimate tool for managing trades, analyzing performance, and staying on top of the market. Track your trades, upload charts, and gain insights to enhance your trading strategy. Stay organized, make informed decisions,
    and grow your portfolio with ease.</p>
    <div className=" mt-5 d-flex justify-content-center align-items-center" >
-<a href="/LandingPage" className="getStartedBtn ">Get Started</a>
+<Link to="/LandingPage">
+  Go to About Page
+</Link>
 </div>
 </div>
       
