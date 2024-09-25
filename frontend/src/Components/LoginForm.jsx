@@ -11,7 +11,7 @@ const LoginForm = ({ closeLoginForm }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4500/login', { email, password });
+      const response = await axios.post('https://tradetracker-rq6i.onrender.com/login', { email, password });
       if (response.data === 'Login successful') {
         setIsAuthenticated(true);
         setMessage('Login successful');
