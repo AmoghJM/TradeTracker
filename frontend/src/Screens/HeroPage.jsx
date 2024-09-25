@@ -57,12 +57,12 @@ const HeroPage=()=>{
     <div className="d-flex justify-content-between">
   <div className="heading btn btn-success">Trade Tracker</div>
 
-    <a href="/" className="mx-2 altercss">Home</a>
-    <a href="#about" className="mx-2 altercss">About</a>
-    <a href="#service" className="mx-2 altercss">Service</a>
-    <a href="#contact" className="mx-2 altercss">Contact</a>
-    <a onClick={handleRegisterClick} className="altercss">Register</a>
-    <a onClick={handleLoginClick} className="altercss" >Login</a>
+    <Link to="/" className="mx-2 altercss">Home</Link>
+    <Link to="#about" className="mx-2 altercss">About</Link>
+    <Link to="#service" className="mx-2 altercss">Service</Link>
+    <Link to="#contact" className="mx-2 altercss">Contact</Link>
+    <Link onClick={handleRegisterClick} className="altercss">Register</Link>
+    <Link onClick={handleLoginClick} className="altercss" >Login</Link>
  
   </div>
   </div>
@@ -75,8 +75,8 @@ const HeroPage=()=>{
 <p className="fs-5 mt-5">Welcome to Trade Tracker – your ultimate tool for managing trades, analyzing performance, and staying on top of the market. Track your trades, upload charts, and gain insights to enhance your trading strategy. Stay organized, make informed decisions,
    and grow your portfolio with ease.</p>
    <div className=" mt-5 d-flex justify-content-center align-items-center" >
-<Link to="/LandingPage">
-  Go to About Page
+<Link to="/LandingPage" className="getStartedBtn ">
+  Get Started
 </Link>
 </div>
 </div>
