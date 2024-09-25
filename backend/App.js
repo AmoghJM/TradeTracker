@@ -72,7 +72,7 @@ db.once("open", () => {
 });
 
 const corsOptions = {
-  origin: "https://trade-tracker-phi.vercel.app",
+  origin: "https://trade-tracker-three.vercel.app",
   credentials: true,
   optionSuccessStatus: 200
 };
