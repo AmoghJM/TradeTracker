@@ -48,38 +48,38 @@ function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-success justify-content-center">
         <div className="container-fluid">
-          <Link className="navbar-brand" href="#">Trade Tracker</Link>
+          <Link className="navbar-brand" to="#">Trade Tracker</Link>
           <button className="navbar-toggler" type="button" onClick={toggleNavbar} data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" href="/">Home</Link>
+                <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/LandingPage">Learn</Link>
+                <Link className="nav-link" to="/LandingPage">Learn</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/ProfitLoss">Portfolio</Link>
+                <Link className="nav-link" to="/ProfitLoss">Portfolio</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" href="/TradingJournal">Trading Journal</Link>
+                <Link className="nav-link" aria-current="page" to="/TradingJournal">Trading Journal</Link>
               </li>
             </ul>
             <ul className="navbar-nav ms-auto">
               {!isAuthenticated ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link" href="#" onClick={handleLoginClick}>Login</Link>
+                    <Link className="nav-link" to="#" onClick={handleLoginClick}>Login</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" href="#" onClick={handleRegisterClick}>Register</Link>
+                    <Link className="nav-link" to="#" onClick={handleRegisterClick}>Register</Link>
                   </li>
                 </>
               ) : (
                 <li className="nav-item">
-                  <Link className="nav-link" href="#" onClick={handleLogoutClick}>Logout</Link>
+                  <Link className="nav-link" to="#" onClick={handleLogoutClick}>Logout</Link>
                 </li>
               )}
             </ul>
