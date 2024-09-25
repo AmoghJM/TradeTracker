@@ -26,7 +26,7 @@ const PerformanceAnalytics = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:4500/TradeEntryForm');
+            const response = await axios.get('https://tradetracker-rq6i.onrender.com/TradeEntryForm');
             const fetchedTrades = Array.isArray(response.data) ? response.data : [response.data];
             setTrades(fetchedTrades);
             setLoading(false);
