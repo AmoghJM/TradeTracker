@@ -72,7 +72,7 @@ db.once("open", () => {
 });
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://trade-tracker-git-main-shresha-acharyas-projects.vercel.app",
   credentials: true,
   optionSuccessStatus: 200
 };
