@@ -47,7 +47,7 @@ const TradeEntryForm = ({ onAddTrade, onClose }) => {
     };
 
     try {
-      const response = await axios.post("http://localhost:4500/TradeEntryForm", updatedFormData);
+      const response = await axios.post("https://tradetracker-rq6i.onrender.com/TradeEntryForm", updatedFormData);
       console.log(response.data);
     } catch (err) {
       console.error(err);
