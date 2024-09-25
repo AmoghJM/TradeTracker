@@ -183,7 +183,7 @@ function ProfitLoss() {
                                         <li className="list-group-item ">Day High: {stockData[Object.keys(stockData)[0]]["2. high"]}</li>
                                         <li className="list-group-item ">Day Low: {stockData[Object.keys(stockData)[0]]["3. low"]}</li>
                                         <li className="list-group-item ">Volume: {stockData[Object.keys(stockData)[0]]["5. volume"]}</li>
-                                        <li className="list-group-item"><button className='btn btn-success me-5' onClick={() => setShowInputs(!showInputs)}>
+                                        <li className="list-group-item"><button className='btn btn-success me-5 mb-2' onClick={() => setShowInputs(!showInputs)}>
                                                  {showInputs ? "Cancel" : "Add to Portfolio"} </button>
                                                  <a href={`https://in.tradingview.com/chart/c96O1lOu/?symbol=${tradingView}`} 
                                                  className='btn btn-success justify-content-end'
